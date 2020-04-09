@@ -11,9 +11,11 @@ function goNext() {
         currentActive.removeClass('active')
         if (currentActive.hasClass('first')) {
             $('.img-box.last').addClass('active')
+            $(rad_inputs[$('.img-box.last').attr('value')]).prop("checked", true)
         }
         else {
             currentActive.prev().addClass('active')
+            $(rad_inputs[currentActive.prev().attr('value')]).prop("checked", true)
         }
 }
 
@@ -23,9 +25,11 @@ function goBack() {
     currentActive.removeClass('active')
     if (currentActive.hasClass('last')) {
         $('.img-box.first').addClass('active')
+        $(rad_inputs[$('.img-box.first').attr('value')]).prop("checked", true)
     }
     else {
         currentActive.next().addClass('active')
+        $(rad_inputs[currentActive.next().attr('value')]).prop("checked", true)
     } 
 }
 
@@ -38,6 +42,7 @@ function goBack() {
 const prev_btn = $('#prev-button')
 const next_btn = $('#next-button')
 const img_boxes = $('.img-box')
+const rad_inputs = $('.regular-radio')
 
 // EVENTS
 $(document).ready (function() {
@@ -61,7 +66,7 @@ $(document).ready (function() {
     // Controller
     $('.controller label').click(function() {
         $('.img-box.active').removeClass('active')
-        $(img_boxes[$(this).attr('value') - 1]).addClass('active')
+        $(img_boxes[$(this).attr('value')]).addClass('active')
     })
 })
 
