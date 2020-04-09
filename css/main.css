@@ -112,6 +112,7 @@ main {
     .wrapper button {
         padding: 5px;
         top: 50%;
+        background: transparent;
     }
 
     .prev-button {
@@ -123,12 +124,15 @@ main {
         transform: translate(-100%, -50%);
     }
 
-    .img-box {
-        background: red;
-        display: none;
+    .wrapper {
+        height: 300px;
+        width: 500px;
     }
 
-    .img-box img {
+    .img-box {
+        display: none;
+        height: 100%;
+        width: 100%;
     }
 
     .img-box.active {

@@ -10,30 +10,31 @@ const next_btn = $('#next-button')
 const img_boxes = $('.img-box')
 
 // EVENTS
-prev_btn.click(function (e) { 
-    var currentActive = $('.img-box.active')
-    currentActive.removeClass('active')
-    if (currentActive.hasClass('first')) {
-        $('.img-box.last').addClass('active')
-    }
-    else {
-        currentActive.next().addClass('active')
-    }
-});
-
-
-next_btn.click(function (e) { 
-    var currentActive = $('.img-box.active')
-    currentActive.removeClass('active')
-    if (currentActive.hasClass('last')) {
-        $('.img-box.first').addClass('active')
-    }
-    else {
-        currentActive.next().addClass('active')
-    }
+$(document).ready (function() {
+    prev_btn.click(function() { 
+        var currentActive = $('.img-box.active')
+        currentActive.removeClass('active')
+        if (currentActive.hasClass('first')) {
+            $('.img-box.last').addClass('active')
+        }
+        else {
+            currentActive.prev().addClass('active')
+        }
+    });
     
     
-});
+    next_btn.click(function() { 
+        var currentActive = $('.img-box.active')
+        currentActive.removeClass('active')
+        if (currentActive.hasClass('last')) {
+            $('.img-box.first').addClass('active')
+        }
+        else {
+            currentActive.next().addClass('active')
+        } 
+    });
+})
+
 
 
 /*
