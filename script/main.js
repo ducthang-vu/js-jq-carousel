@@ -36,7 +36,7 @@ $(document).ready (function() {
     }
 
 
-    function keyboard() {
+    function keyboard(e) {
         switch (e.keyCode) {
             case 37:
                 goBack()
