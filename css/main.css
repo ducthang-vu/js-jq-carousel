@@ -82,6 +82,31 @@ li {
     color: #fff;
 }
 
+
+    /* Utilities: NAV-RADIO */
+    .regular-radio {
+        display: none;
+    }
+
+    .regular-radio + label {
+        -webkit-appearance: none;
+        background-color: inherit;
+        border: 2px solid blue;
+        border-radius: 10px;
+        width: 100%;
+        display: inline-block;
+        position: relative;
+        width: 15px;
+        height: 15px;
+    }
+
+    .regular-radio:checked + label {
+        background: blue;
+        border: 2px solid blue;
+    }
+
+
+
 /* APP */
 .app {
     height: 100vh;

@@ -41,9 +41,11 @@ const img_boxes = $('.img-box')
 
 // EVENTS
 $(document).ready (function() {
+    // Buttons
     prev_btn.click(goNext)
     next_btn.click(goBack)
 
+    // Keyboard
     $(document).keydown(function(e) {
         switch (e.keyCode) {
             case 37:
@@ -56,7 +58,11 @@ $(document).ready (function() {
     })
 
 
-
+    // Controller
+    $('.controller label').click(function() {
+        $('.img-box.active').removeClass('active')
+        $(img_boxes[$(this).attr('value') - 1]).addClass('active')
+    })
 })
 
 
