@@ -36,11 +36,6 @@ li {
     font-size: 130%;
 }
 
-.button {
-    padding: 15px;
-    font-size: 120%;
-}
-
 .container {
     padding: 25px;
     background: orange;
@@ -101,43 +96,62 @@ main {
     align-items: center;
 }
 
+/* main: WRAPPER */
     .wrapper {
-        height: 80%;
-        width: 800px;
+        height: 300px;
+        width: 500px;
         justify-content: center;
         align-items: center;
         background: blue;
     }
 
-    .wrapper button {
-        padding: 5px;
-        top: 50%;
-        background: transparent;
-    }
 
-    .prev-button {
-        transform: translateY(-100%);
-    }
+        /* Buttons */
+        .wrapper button,
+        .wrapper button.focus {
+            padding: 5px;
+            top: 50%;
+            font-size: 200%;
+            background: transparent;
+            border: 0;
+            outline: none;
+            color: darkred;
+        }
 
-    .next-button {
-        left: 100%;
-        transform: translate(-100%, -50%);
-    }
+        .prev-button {
+            transform: translateY(-50%);
+        }
 
-    .wrapper {
-        height: 300px;
-        width: 500px;
-    }
+        .next-button {
+            left: 100%;
+            transform: translate(-100%, -50%);
+        }
 
-    .img-box {
-        display: none;
-        height: 100%;
-        width: 100%;
-    }
 
-    .img-box.active {
-        display: block;
-    }
+        /* controller */
+        .controller {
+            bottom: 20px;
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        .controller .circle {
+            display: inline-block;
+            width: 
+            border 2px solid #fff;
+            border-radius: 50%;
+        }
+
+
+        /* img-box */
+        .img-box {
+            display: none;
+            height: 100%;
+            width: 100%;
+        }
+
+        .img-box.active {
+            display: block;
+        }
 
 
 /* FOOTER  */
