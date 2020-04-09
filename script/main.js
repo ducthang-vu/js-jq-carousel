@@ -2,8 +2,10 @@ console.log('main.js is working')
 console.log($)
 
 
+/***************/
+/*  FUNCTIONS  */
+/***************/
 
-// FUNCTIONS 
 function goNext() {
     var currentActive = $('.img-box.active')
         currentActive.removeClass('active')
@@ -28,6 +30,10 @@ function goBack() {
 }
 
 
+/***************/
+/* MAIN SCRIPT */
+/***************/
+
 // GLOBAL VARIABLES
 const prev_btn = $('#prev-button')
 const next_btn = $('#next-button')
@@ -37,6 +43,20 @@ const img_boxes = $('.img-box')
 $(document).ready (function() {
     prev_btn.click(goNext)
     next_btn.click(goBack)
+
+    $(document).keydown(function(e) {
+        switch (e.keyCode) {
+            case 37:
+                goBack()
+                break
+            case 39:
+                goNext()
+                break
+        }
+    })
+
+
+
 })
 
 
