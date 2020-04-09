@@ -76,21 +76,3 @@ $(document).ready (function() {
     // Controller
     $('.controller label').click(controller)
 })
-
-
-
-/*
-function next_circular (lenght, index, leap=1) {
-    return (index % lenght) + leap - 1
-}
-
-
-const test = [
-    [next_circular(5, 4), 0],
-    [next_circular(5, 3), 4],
-    [next_circular(5, 4, -1), 3],
-    [next_circular(5, 3, -1), 2]
-]
-
-console.table(test) 
-*/
