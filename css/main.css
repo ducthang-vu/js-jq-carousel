@@ -141,6 +141,7 @@ main {
             border: 0;
             outline: none;
             color: darkred;
+            cursor: pointer;
         }
 
         .prev-button {
@@ -166,6 +167,7 @@ main {
 
         .controller > * {
             margin: 2px;
+            cursor: pointer;
         }
 
         /* img-box */
