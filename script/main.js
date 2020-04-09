@@ -3,6 +3,30 @@ console.log($)
 
 
 
+// FUNCTIONS 
+function goNext() {
+    var currentActive = $('.img-box.active')
+        currentActive.removeClass('active')
+        if (currentActive.hasClass('first')) {
+            $('.img-box.last').addClass('active')
+        }
+        else {
+            currentActive.prev().addClass('active')
+        }
+}
+
+
+function goBack() {
+    var currentActive = $('.img-box.active')
+    currentActive.removeClass('active')
+    if (currentActive.hasClass('last')) {
+        $('.img-box.first').addClass('active')
+    }
+    else {
+        currentActive.next().addClass('active')
+    } 
+}
+
 
 // GLOBAL VARIABLES
 const prev_btn = $('#prev-button')
@@ -11,28 +35,8 @@ const img_boxes = $('.img-box')
 
 // EVENTS
 $(document).ready (function() {
-    prev_btn.click(function() { 
-        var currentActive = $('.img-box.active')
-        currentActive.removeClass('active')
-        if (currentActive.hasClass('first')) {
-            $('.img-box.last').addClass('active')
-        }
-        else {
-            currentActive.prev().addClass('active')
-        }
-    });
-    
-    
-    next_btn.click(function() { 
-        var currentActive = $('.img-box.active')
-        currentActive.removeClass('active')
-        if (currentActive.hasClass('last')) {
-            $('.img-box.first').addClass('active')
-        }
-        else {
-            currentActive.next().addClass('active')
-        } 
-    });
+    prev_btn.click(goNext)
+    next_btn.click(goBack)
 })
 
 
