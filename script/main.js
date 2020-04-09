@@ -48,6 +48,12 @@ $(document).ready (function() {
     }
 
 
+    function controller() {
+        $('.img-box.active').removeClass('active')
+        $(img_boxes[$(this).attr('value')]).addClass('active')
+    }
+
+
     /***************/
     /* MAIN SCRIPT */
     /***************/
@@ -68,10 +74,7 @@ $(document).ready (function() {
     $(document).keydown(keyboard)
 
     // Controller
-    $('.controller label').click(function() {
-        $('.img-box.active').removeClass('active')
-        $(img_boxes[$(this).attr('value')]).addClass('active')
-    })
+    $('.controller label').click(controller)
 })
 
 
