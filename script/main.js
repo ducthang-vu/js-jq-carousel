@@ -38,10 +38,10 @@ $(document).ready (function() {
 
     function keyboard(e) {
         switch (e.keyCode) {
-            case 37:
+            case 39:
                 goNext()
                 break
-            case 39:
+            case 37:
                 goBack()
                 break
         }
