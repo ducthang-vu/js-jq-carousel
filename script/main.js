@@ -8,7 +8,7 @@ $(document).ready (function() {
     /*  FUNCTIONS  */
     /***************/
 
-    function goNext() {
+    function goBack() {
         var currentActive = $('.img-box.active')
             currentActive.removeClass('active')
             if (currentActive.hasClass('first')) {
@@ -22,7 +22,7 @@ $(document).ready (function() {
     }
 
 
-    function goBack() {
+    function goNext() {
         var currentActive = $('.img-box.active')
         currentActive.removeClass('active')
         if (currentActive.hasClass('last')) {
@@ -39,10 +39,10 @@ $(document).ready (function() {
     function keyboard(e) {
         switch (e.keyCode) {
             case 37:
-                goBack()
+                goNext()
                 break
             case 39:
-                goNext()
+                goBack()
                 break
         }
     }
@@ -67,8 +67,8 @@ $(document).ready (function() {
 
     /* EVENTS */
     // Buttons
-    prev_btn.click(goNext)
-    next_btn.click(goBack)
+    prev_btn.click(goBack)
+    next_btn.click(goNext)
 
     // Keyboard
     $(document).keydown(keyboard)
